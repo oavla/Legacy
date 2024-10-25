@@ -14,34 +14,34 @@
 }
 
 .game-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    overflow: hidden; /* Ensure no overflow */
+    width: 200px; /* Fixed width */
+    text-align: center; /* Center text */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
     position: relative; /* Keeps z-index functional */
     z-index: 10; /* Bring cards in front */
 }
 
 .game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
 .game-card img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .game-card h3 {
-    font-size: 1.2em;
-    margin: 10px 0 5px 0;
+    font-size: 1.2em; /* Font size for title */
+    margin: 10px 0 5px 0; /* Margin for title */
 }
 
 .game-card p {
-    font-size: 0.9em;
-    color: #555;
-    padding: 0 10px 10px 10px;
+    font-size: 0.9em; /* Font size for description */
+    color: #555; /* Description color */
+    padding: 0 10px 10px 10px; /* Padding for description */
 }
