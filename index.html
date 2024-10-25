@@ -27,5 +27,27 @@
     </div>
 
     <script src="js/home.js"></script>
+
+    <script>
+    const text = "Welcome to Legacy."; 
+    const typingSpeed = 150; 
+    let index = 0;
+
+    function typeText() {
+        if (index < text.length) {
+            document.getElementById('auto-typed-text').textContent += text.charAt(index);
+            index++;
+            setTimeout(typeText, typingSpeed); 
+        } else {
+            document.getElementById('cursor').style.display = 'none'; 
+        }
+    }
+
+    // Start typing when the page loads
+    window.onload = function() {
+        typeText();
+    };
+</script>
+
 </body>
 </html>
