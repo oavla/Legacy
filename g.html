@@ -7,6 +7,36 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/g.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .game-card {
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            margin: 10px; /* Added for spacing */
+            border: 1px solid #ccc; /* Added border for visibility */
+            padding: 10px; /* Added padding for better layout */
+            border-radius: 8px; /* Rounded corners */
+            background-color: white; /* Background color */
+        }
+
+        .game-card a {
+            text-decoration: none;
+            color: inherit; /* Inherit text color from parent */
+            display: block; /* Make the entire card clickable */
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .game-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <canvas></canvas>
@@ -42,7 +72,7 @@
                 const card = document.createElement('div');
                 card.className = 'game-card no-hover'; 
                 card.innerHTML = `
-                    <a href="${game.link}">
+                    <a href="${game.link}" target="_blank">
                         <img src="${game.image}" alt="${game.title}" />
                         <h3>${game.title}</h3>
                     </a>
