@@ -19,6 +19,7 @@ body {
     background-color: #1E1E1E;
     padding: 3px;
     display: flex;
+    margin-left: 500px;
     flex-direction: column;
     justify-content: flex-start; 
     position: fixed;
@@ -72,7 +73,6 @@ body {
 
 .container {
     padding: 30px;
-    margin-left: 60px;
     color: #fff;
     flex-grow: 1;
     display: flex;
