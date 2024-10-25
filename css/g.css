@@ -34,9 +34,8 @@
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
     position: relative; /* Keeps z-index functional */
     z-index: 10; /* Bring cards in front */
-    opacity: 0; /* Start hidden */
+    opacity: 1; /* Ensure cards are visible by default */
     animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
-    animation-delay: 0s; /* Default delay */
 }
 
 .game-card:hover {
