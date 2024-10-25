@@ -1,9 +1,10 @@
 .cards-wrapper {
-    display: flex; /* Use flexbox */
+    display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically if desired */
-    height: 100vh; /* Full height of the viewport */
-    background: linear-gradient(135deg, #ece9e6, #ffffff); /* Subtle background gradient */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    height: auto; /* Adjust height as needed */
+    background-color: #000; /* Dark background for contrast */
 }
 
 .game-cards-container {
@@ -14,63 +15,38 @@
     margin-top: 20px;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Slight upward movement on load */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .game-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
-    border-radius: 20px;
-    border: 2px solid #fff; /* Add a border */
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    background: #f0c040; /* Solid background color for cards */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Subtle shadow */
     overflow: hidden;
-    width: 120px; /* Slightly wider */
-    height: 150px; /* Slightly taller */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    width: 160px; /* Adjust width */
+    height: 120px; /* Adjust height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
     padding: 10px; /* Add padding */
+    transition: transform 0.3s; /* Smooth scaling effect */
 }
 
 .game-card img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the card */
-    transition: transform 0.3s; /* Smooth transition for scaling */
+    width: 80%; /* Set a fixed size for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and title */
 }
 
 .game-card h3 {
-    position: absolute;
-    bottom: 10px; /* Position at the bottom */
-    left: 50%;
-    transform: translate(-50%, 0) scale(1);
-    font-size: 1.1em; /* Slightly larger font size */
+    font-size: 1.2em; /* Larger font size */
     margin: 0; /* Remove default margin */
-    color: white; /* White text for contrast */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* More pronounced text shadow */
-    opacity: 0; /* Initially hidden */
-    transition: transform 0.3s, opacity 0.3s; /* Smooth transition for scaling and fading */
+    color: #fff; /* White text for contrast */
+    font-weight: bold; /* Bold text for prominence */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
 }
 
 .game-card:hover {
     transform: scale(1.05); /* Slightly scale up the card on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
-}
-
-.game-card:hover img {
-    transform: scale(1.1); /* Slightly scale up the image on hover */
-}
-
-.game-card:hover h3 {
-    opacity: 1; /* Show title on hover */
-    transform: translate(-50%, 0) scale(1.5); /* Scale up title */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
 }
