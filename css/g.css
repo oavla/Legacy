@@ -49,6 +49,7 @@
 }
 
 .game-card h3 {
+    color: black;
     font-size: 1.2em; /* Initial font size */
     margin: 10px 0 5px 0; /* Margin for title */
     transition: transform 0.3s, opacity 0.3s; /* Smooth transition for scaling and fading */
