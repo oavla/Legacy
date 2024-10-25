@@ -30,7 +30,7 @@
     width: 100%; /* Full width for images */
     height: 100%; /* Full height for images */
     object-fit: cover; /* Cover the card completely */
-    position: fixed; /* Position absolutely within the card */
+    position: absolutely; /* Position absolutely within the card */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
     z-index: 1; /* Place the image behind the title */
