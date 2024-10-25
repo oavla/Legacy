@@ -19,25 +19,40 @@
         </ul>
     </div>
 
-    <div class="game-cards-container">
-        <div class="game-card">
-            <img src="path/to/image1.jpg" alt="Game 1" />
-            <h3>Game Title 1</h3>
-            <p>Description of the game goes here.</p>
-        </div>
-        <div class="game-card">
-            <img src="path/to/image2.jpg" alt="Game 2" />
-            <h3>Game Title 2</h3>
-            <p>Description of the game goes here.</p>
-        </div>
-        <div class="game-card">
-            <img src="path/to/image3.jpg" alt="Game 3" />
-            <h3>Game Title 3</h3>
-            <p>Description of the game goes here.</p>
-        </div>
-        <!-- Add more cards as needed -->
+    <div class="game-cards-container" id="gameCardsContainer">
     </div>
 
     <script src="js/home.js"></script>
+    <script>
+       
+        async function fetchGameData() {
+            try {
+                const response = await fetch('games.json'); 
+                const games = await response.json();
+                displayGameCards(games);
+            } catch (error) {
+                console.error('Error fetching game data:', error);
+            }
+        }
+
+        function displayGameCards(games) {
+            const container = document.getElementById('gameCardsContainer');
+            container.innerHTML = ''; 
+
+            games.forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'game-card';
+                card.innerHTML = `
+                    <img src="${game.image}" alt="${game.title}" />
+                    <h3>${game.title}</h3>
+                    <p>${game.description}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+       
+        fetchGameData();
+    </script>
 </body>
 </html>
