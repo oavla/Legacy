@@ -25,40 +25,47 @@
 }
 
 .game-card {
+    position: relative; /* For absolute positioning of title */
     background-color: #fff; 
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     overflow: hidden; 
-    width: 200px; 
+    width: 200px; /* Fixed width for cards */
+    height: 300px; /* Fixed height for cards */
     text-align: center; 
-    transition: transform 0.3s, box-shadow 0.3s, backdrop-filter 0.3s; /* Smooth transition */
-    position: relative; 
+    transition: box-shadow 0.3s, backdrop-filter 0.3s; /* Smooth transition */
     z-index: 10; 
-    opacity: 0; 
-    animation: fadeIn 0.5s forwards; 
 }
 
 .game-card img {
-    width: 100%; 
-    height: auto; 
-}
-
-.game-card:hover {
-    backdrop-filter: blur(5px); /* Blur the background on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    width: 100%; /* Full width for images */
+    height: 100%; /* Full height for images */
+    object-fit: cover; /* Maintain aspect ratio and cover the card */
+    transition: filter 0.3s; /* Smooth transition for filter */
 }
 
 .game-card h3 {
-    color: black;
-    font-size: 1.2em; /* Initial font size */
-    margin: 10px 0 5px 0; /* Margin for title */
-    transition: transform 0.3s, opacity 0.3s; /* Smooth transition for scaling and fading */
+    position: absolute; /* Position title absolutely within the card */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center */
+    font-size: 1.5em; /* Font size for title */
+    margin: 0; /* Remove default margin */
     opacity: 0; /* Initially hidden */
-    transform: translateY(10px); /* Slight downward movement */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition for scaling and fading */
+}
+
+.game-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    backdrop-filter: blur(5px); /* Blur the background on hover */
+}
+
+.game-card:hover img {
+    filter: blur(2px); /* Blur the image on hover */
 }
 
 .game-card:hover h3 {
     opacity: 1; /* Show title on hover */
-    transform: scale(1.5) translateY(0); /* Scale up and move to original position */
+    transform: translate(-50%, -50%) scale(1.5); /* Scale up title */
 }
 
