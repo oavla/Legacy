@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Game Title 1",
+        "image": "path/to/image1.jpg",
+        "description": "Description of the game goes here."
+    },
+    {
+        "title": "Game Title 2",
+        "image": "path/to/image2.jpg",
+        "description": "Description of the game goes here."
+    },
+    {
+        "title": "Game Title 3",
+        "image": "path/to/image3.jpg",
+        "description": "Description of the game goes here."
+    }
+]
