@@ -39,7 +39,7 @@
             const container = document.getElementById('gameCardsContainer');
             container.innerHTML = ''; 
 
-            games.forEach(game => {
+              games.forEach((game, index) => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
                 card.innerHTML = `
