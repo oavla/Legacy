@@ -23,6 +23,7 @@
     overflow: hidden; /* Hide overflow for rounded corners */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Deep shadow for elevation */
+    background: transparent; /* Ensure background is transparent */
 }
 
 .game-card img {
