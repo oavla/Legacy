@@ -36,10 +36,7 @@
     z-index: 10; /* Bring cards in front */
     opacity: 0; /* Start hidden */
     animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
-}
-
-.game-card.no-hover {
-    pointer-events: none; /* Disable hover effects */
+    transform: translateY(0);
 }
 
 .game-card:hover {
