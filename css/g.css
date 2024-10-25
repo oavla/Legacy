@@ -17,13 +17,14 @@
 
 .game-card {
     position: relative;
-    width: 160px; /* Card width */
+    width: 150px; /* Card width */
     height: 100px; /* Card height */
     border-radius: 15px; /* Rounded corners */
     overflow: hidden; /* Hide overflow for rounded corners */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Deep shadow for elevation */
     background-color: transparent; /* Ensure background is transparent */
+    border: none;
 }
 
 .game-card img {
