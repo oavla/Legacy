@@ -30,8 +30,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-            width: 250px; /* Fixed width for cards */
-            height: 350px; /* Fixed height for cards */
+            width: 150px; /* Fixed width for cards */
+            height: 150px; /* Fixed height for cards */
             transition: box-shadow 0.3s, backdrop-filter 0.3s;
             z-index: 10;
         }
