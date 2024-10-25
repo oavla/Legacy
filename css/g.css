@@ -25,37 +25,39 @@
 }
 
 .game-card {
-    background-color: #fff; /* Card background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    overflow: hidden; /* Ensure no overflow */
-    width: 200px; /* Fixed width */
-    text-align: center; /* Center text */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
-    position: relative; /* Keeps z-index functional */
-    z-index: 10; /* Bring cards in front */
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.game-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+    width: 200px; 
+    text-align: center; 
+    transition: transform 0.3s, box-shadow 0.3s, backdrop-filter 0.3s; /* Smooth transition */
+    position: relative; 
+    z-index: 10; 
+    opacity: 0; 
+    animation: fadeIn 0.5s forwards; 
 }
 
 .game-card img {
-    width: 100%; /* Full width for images */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
+}
+
+.game-card:hover {
+    backdrop-filter: blur(5px); /* Blur the background on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
 .game-card h3 {
-    font-size: 1.2em; /* Font size for title */
+    font-size: 1.2em; /* Initial font size */
     margin: 10px 0 5px 0; /* Margin for title */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition for scaling and fading */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(10px); /* Slight downward movement */
 }
 
-.game-card p {
-    font-size: 0.9em; /* Font size for description */
-    color: #555; /* Description color */
-    padding: 0 10px 10px 10px; /* Padding for description */
+.game-card:hover h3 {
+    opacity: 1; /* Show title on hover */
+    transform: scale(1.5) translateY(0); /* Scale up and move to original position */
 }
+
