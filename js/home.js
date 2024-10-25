@@ -163,7 +163,7 @@ function onMouseLeave() {
                 star.style.setProperty('--x', ${x}px);
                 star.style.setProperty('--y', ${y}px);
                 
-                star.style.animationDelay = ${Math.random() * 0.2}s;
+                star.style.animationDelay = ${Math.random() * 0.2}s`;
                 
                 document.body.appendChild(star);
                 
