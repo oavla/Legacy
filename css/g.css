@@ -14,6 +14,8 @@
     width: 200px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Add this line */
+    z-index: 10; /* Add this line to bring the cards in front */
 }
 
 .game-card:hover {
@@ -36,4 +38,3 @@
     color: #555;
     padding: 0 10px 10px 10px;
 }
-
