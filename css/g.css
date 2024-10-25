@@ -1,7 +1,14 @@
+.cards-wrapper {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if desired */
+    height: 100vh; /* Optional: full height of the viewport */
+}
+
 .game-cards-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Center cards within this container */
     gap: 20px;
     margin-top: 20px;
 }
@@ -14,8 +21,8 @@
     width: 200px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    position: relative; /* Add this line */
-    z-index: 10; /* Add this line to bring the cards in front */
+    position: relative; /* Keeps z-index functional */
+    z-index: 10; /* Bring cards in front */
 }
 
 .game-card:hover {
