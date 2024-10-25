@@ -44,7 +44,6 @@ function displayGameCards(games) {
         card.innerHTML = `
             <img src="${game.image}" alt="${game.title}" />
             <h3>${game.title}</h3>
-            <p>${game.description}</p>
         `;
         card.style.animationDelay = `${index * 0.1}s`; 
         container.appendChild(card);
