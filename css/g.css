@@ -25,7 +25,7 @@
 }
 
 .game-card {
-    position: relative; /* For absolute positioning of title */
+    position: relative; /* For absolute positioning of the title */
     background-color: #fff; 
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -38,9 +38,12 @@
 }
 
 .game-card img {
+    position: absolute; /* Position the image absolutely within the card */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
     width: 100%; /* Full width for images */
     height: 100%; /* Full height for images */
-    object-fit: cover; /* Maintain aspect ratio and cover the card */
+    object-fit: cover; /* Cover the card without stretching */
     transition: filter 0.3s; /* Smooth transition for filter */
 }
 
