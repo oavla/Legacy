@@ -13,6 +13,17 @@
     margin-top: 20px;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward movement on load */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .game-card {
     background-color: #fff; /* Card background */
     border-radius: 8px; /* Rounded corners */
@@ -23,6 +34,9 @@
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
     position: relative; /* Keeps z-index functional */
     z-index: 10; /* Bring cards in front */
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
+    animation-delay: 0s; /* Default delay */
 }
 
 .game-card:hover {
